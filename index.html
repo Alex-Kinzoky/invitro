@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="invitro_header">
+    <div class="invitro_header-container">
+        <div class="invitro_header-middle">
+            <div class="row row--start row--center">
+                <a href="/">
+                    <img class="header-logo" src="images/main-logo.svg" alt="Медицинская компания Инвитро">
+                </a>
+                <a class="header-monitoring" href="/l/invitro_monitor/?from=logo_header">
+                    <img src="images/monitoring.svg" alt="logo">
+                </a>
+            </div>
+            <div class="invitro_header-middle_city">
+                <div class="city" id="city">
+                    <div class="city__label">
+                        <span class="city__name city__btn city__name--label">Санкт-Петербург</span>
+                        <img class="city_arrow" src="images/city_arrow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="invitro_header-search">
+                <div class="invitro_header-search_container">
+                    <div class="header-search">
+                        <div class="header-search__side-box" style="display: none;">
+                            <div class="header-search__select--wrap">
+                                <select class="header-search__select">
+                                    <option>Анализы</option>
+                                    <option>Искать везде</option>
+                                    <option>Медицинские услуги</option>
+                                    <option>В комплексных обследованиях</option>
+                                    <option>Запись к врачу</option>
+                                    <option>В библиотеке</option>
+                                    <option>Новости</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="header-search__box">
+                            <form class="form-header-search" action="/search/">
+                                <div class="preload"></div>
+                                <input name="q" value="" class="search__input form-header-search_input" type="text" placeholder="Поиск на сайте" autocomplete="off">
+                                <input name="city" type="hidden" value="piter" >
+                                <input name="place" type="hidden" value="" placeholder="Начать поиск">
+                                <input name="from" type="hidden" value="" />
+                                <button name="s" class="search__btn search__btn--header"></button>
+                            </form>
+                        </div>
+                        <div class="search-dropdown" id="quick-search-container">
+                            <div class="side-bar--search-dropdown analysis-list scrollbar-inner"></div>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <div class="invitro_header-phone">
+                <div>
+                    <a class="invitro_header-phone__link" href="tel:88123633630" onclick="(dataLayer = window.dataLayer || []).push({'eCategory':'conversion', 'eAction':'phone-number', 'eLabel': 'click', 'eNI':'0', 'event': 'GAEvent'});">8 (812) 363-363-0</a>
+                </div>
+                <div>
+                    <span >
+                        <a class="invitro_header-phone__link" href="tel:88002003630" onclick="(dataLayer = window.dataLayer || []).push({'eCategory':'conversion', 'eAction':'phone-number', 'eLabel': 'click', 'eNI':'0', 'event': 'GAEvent'});">8 (800) 200-363-0 </a>
+                        <span class="header-phone__disrcipt ">Бесплатный звонок по России</span>
+                    </span>
+                </div>
+                <img class="phone_arrow" src="/local/templates/invitro_main/src/image/icons/header/city_arrow.svg" alt="">
+            </div>
+            <div class="invitro_header-menu">
+                <div class="invitro_header-warning_middle"></div>
+                    <div class="invitro-header-cart row row--center">
+                        <div class="invitro-header-cart__icon" data-header-basket="0">
+                            <a href="https://lk3.invitro.ru/cart">
+                                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 1C0.5 0.585786 0.835786 0.25 1.25 0.25H4C4.32925 0.25 4.62001 0.464742 4.71683 0.779436L6.09239 5.25H21C21.2599 5.25 21.5013 5.38459 21.638 5.6057C21.7746 5.82681 21.7871 6.10292 21.6708 6.33541L17.6708 14.3354C17.5438 14.5895 17.2841 14.75 17 14.75H8C7.67075 14.75 7.37999 14.5353 7.28317 14.2206L3.44607 1.75H1.25C0.835786 1.75 0.5 1.41421 0.5 1ZM6.55393 6.75L8.55393 13.25H16.5365L19.7865 6.75H6.55393Z" fill="#13353F"/>
+                                    <path d="M8.25 18C8.25 18.6904 7.69036 19.25 7 19.25C6.30964 19.25 5.75 18.6904 5.75 18C5.75 17.3096 6.30964 16.75 7 16.75C7.69036 16.75 8.25 17.3096 8.25 18Z" fill="#13353F"/>
+                                    <path d="M17.25 18C17.25 18.6904 16.6904 19.25 16 19.25C15.3096 19.25 14.75 18.6904 14.75 18C14.75 17.3096 15.3096 16.75 16 16.75C16.6904 16.75 17.25 17.3096 17.25 18Z" fill="#13353F"/>
+                                </svg>
+    
+                                <div class="invitro-header-cart__count header-cart__count" style="display:none;"></div>
+    
+                                <div class="invitro_header-menu__tooltip">
+                                    <div class="invitro-header-cart_empty" style="display:none;">Корзина пуста</div>
+                                    <div class="invitro-header-cart_full" style="display:none;">В корзине <br><span></span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="invitro_header-menu_login">
+                        <a href="https://lk3.invitro.ru/login" class="login__btn header_display_none" id="header_user_name">
+                            <span></span>
+    
+                        </a>
+    
+                        <button id="header_button_login_kk" class="login__btn" onclick='window.location.href="https://lk3.invitro.ru/login";'>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3.35992C9.61408 3.35992 7.67995 5.29405 7.67995 7.67992C7.67995 10.0658 9.61408 11.9999 12 11.9999C14.3858 11.9999 16.32 10.0658 16.32 7.67992C16.32 5.29405 14.3858 3.35992 12 3.35992ZM6.23995 7.67992C6.23995 4.49876 8.81879 1.91992 12 1.91992C15.1811 1.91992 17.76 4.49876 17.76 7.67992C17.76 10.8611 15.1811 13.4399 12 13.4399C8.81879 13.4399 6.23995 10.8611 6.23995 7.67992ZM11.88 16.3199C8.27592 16.3199 5.20793 18.623 4.07092 21.8399C3.9384 22.2148 3.52705 22.4113 3.15213 22.2788C2.77722 22.1463 2.58071 21.7349 2.71323 21.36C4.04723 17.5857 7.64668 14.8799 11.88 14.8799C13.0147 14.8799 14.1056 15.0747 15.1199 15.4332C15.4948 15.5657 15.6913 15.9771 15.5588 16.352C15.4263 16.7269 15.0149 16.9234 14.64 16.7909C13.7777 16.4861 12.849 16.3199 11.88 16.3199Z" fill="#13353F"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5201 17.7596C17.5201 16.5667 18.4871 15.5996 19.6801 15.5996C20.873 15.5996 21.8401 16.5667 21.8401 17.7596V18.4796H22.0801C22.4777 18.4796 22.8001 18.802 22.8001 19.1996V21.5996C22.8001 21.9973 22.4777 22.3196 22.0801 22.3196H17.2801C16.8824 22.3196 16.5601 21.9973 16.5601 21.5996V19.1996C16.5601 18.802 16.8824 18.4796 17.2801 18.4796H17.5201L17.5201 17.7596ZM18.0001 19.9196H21.3601V20.8796H18.0001V19.9196ZM20.4001 18.4796H18.9601V17.7596C18.9601 17.362 19.2824 17.0396 19.6801 17.0396C20.0777 17.0396 20.4001 17.362 20.4001 17.7596V18.4796Z" fill="#FF6A13"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="invitro_header-menu_burger">
+                        <button class="invitro_header-menu__btn header-menu__btn ripple" onclick="(dataLayer = window.dataLayer || []).push({'eCategory':'UX', 'eAction':'topmenu', 'eLabel': 'ok', 'eNI':'0', 'event': 'GAEvent'});">
+                            <div class="header-menu__btn-inner">
+                                <div class="header-menu__btn-inner_show">
+                                    <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 0.25C0.585786 0.25 0.25 0.585786 0.25 1C0.25 1.41421 0.585786 1.75 1 1.75H21C21.4142 1.75 21.75 1.41421 21.75 1C21.75 0.585786 21.4142 0.25 21 0.25H1Z" fill="#13353F"/>
+                                        <path d="M0.25 7C0.25 6.58579 0.585786 6.25 1 6.25H21C21.4142 6.25 21.75 6.58579 21.75 7C21.75 7.41421 21.4142 7.75 21 7.75H1C0.585786 7.75 0.25 7.41421 0.25 7Z" fill="#13353F"/>
+                                        <path d="M0.25 13C0.25 12.5858 0.585786 12.25 1 12.25H21C21.4142 12.25 21.75 12.5858 21.75 13C21.75 13.4142 21.4142 13.75 21 13.75H1C0.585786 13.75 0.25 13.4142 0.25 13Z" fill="#13353F"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="invitro_header-bottom">
+            <div class="invitro_header-bottom_left">
+                <div id="buttonOpenPopupTargetBDyz4CzP" class="invitro_header-target_audience">
+                    <img height="13" width="13"src="images/597bffeb4ffcfde1b126e584d4a94ea2.svg" alt="">
+                    <span>Пациентам</span>
+
+                    <svg style="margin-top: 4px;margin-left: 6px;" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1.5L4 4.5L7 1.5" stroke="#0097B3" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <nav class="">
+                    <ul class="header-nav__list nav-scroller-content invitro_header-menu_main">
+                        <li class="invitro_header-menu_main-item">
+                            <a href="https://www.invitro.ru/l/laboratornye-testy-na-covid-19-severo-zapad/">COVID-19</a>
+                        </li>
+                        <li class="invitro_header-menu_main-item">
+                            <a href="/analizes/for-doctors/piter/">Анализы</a>
+                        </li>
+                        <li class="invitro_header-menu_main-item">
+                            <a href="/piter/vrachi/">Запись к врачу</a>
+                        </li>
+                        <li class="invitro_header-menu_main-item">
+                            <a href="/ak/">Акции</a>
+                        </li>
+                        <li class="invitro_header-menu_main-item">
+                            <a href="/offices/piter/">Адреса</a>
+                        </li>
+                        <li class="invitro_header-menu_main-item">
+                            <a href="/piter/radiology/">Медицинские услуги</a>
+                        </li>
+                        <li class="invitro_header-menu_main-item">
+                            <a href="/piter/vnd/" class="ins-custom-color-51">Выезд на дом</a>
+                        </li>
+                        <li class="invitro_header-menu_main-item">
+                            <a href="/piter/programmy-zdorovya/">Программы здоровья</a>
+                        </li>
+            
+                        <li class="invitro_header-menu_main-item invitro_header-menu_main-item_more">
+                            <span>Еще
+                                <svg style="margin-left: 5px;" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1.5L4 4.5L7 1.5" stroke="#13353F" stroke-width="1.5" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+
+                            <div id="moreMenuItems" class="invitro_header-menu_main-item_more-info"></div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="invitro_header-bottom_right">
+                <a href="https://lk3.invitro.ru/no-registration-results" rel="index nofollow" class="invitro_header-get_result" onclick="(dataLayer = window.dataLayer || []).push({'pPath': location.pathname + 'virtual/send-results/', 'event': 'GAPageview'});">
+                    <svg class="icon" style="background-image: url(./images/colb.PNG); background-size:cover">
+                        <use xlink:href="images/colb.png"></use>
+                    </svg>
+                    <span>Результаты анализов</span>
+                </a>
+                    <div class="invitro_header-warning_bottom">
+                        <div id="headerAttention" class='attention--header'>
+                            <div class='attention--header--button'>
+                                <div class='img'>
+                                    <svg class="icon" style="background-image: url(./images/bell.PNG); background-repeat:no-repeat; background-size:cover">
+                                        <use xlink:href="/local/templates/invitro_main/src/image/sprites/spriteSVG/symbol/sprite.svg#attention_bell"></use>
+                                    </svg>
+                                    <span class="to-read"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="bvi-open invitro_header-switch_bvi qr-bvi switch-bvi_view" href="#" alt="Версия сайта для слабовидящих" title="Версия сайта для слабовидящих">
+                        <svg class="icon" style="background-image: url(./images/bvi.PNG); background-repeat:no-repeat; background-size:cover">
+                            <use xlink:href="/images/bvi.PNG"></use>
+                        </svg>
+
+                        <span class="attention--header--tooltip" style="display: none;">
+                            Версия для слабовидящих
+                        </span>
+                    </a>
+
+                    <div class="invitro_header-switch_lang">
+                        Ru <svg id="lang_svg" style="margin-left: 5px;" width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path id="lang_id" d="M1 1.5L4 4.5L7 1.5" stroke="#13353F" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+            </div>
+        </div>
+            <div class="invitro_header-burger_show">
+            
+
+</header>
+<div class="container-content show">
+    <div class="container">
+		<div class="main-content-header ds_container">				
+            <div class="bread-crumbs">
+				<ul class="bread-crumbs__list" itemscope itemtype="http://schema.org/BreadcrumbList">
+                    <li class="bread-crumbs__item ds21" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <a class="bread-crumbs__link " href="/" itemprop="item">
+                            <span itemprop="name">ИНВИТРО</span>
+                            <meta itemprop="position" content="1" />
+                        </a>
+                    </li>
+                    <li class="bread-crumbs__item">
+                        <span class="bread-crumbs__current">Сервис проверки результатов</span>
+                    </li>
+                </ul>
+                    <div class="modified_date">Последнее изменение: ноябрь 2021</div>
+
+			</div>
+			<div class="title-block   ">
+				<h1>Сервис проверки результатов</h1>
+            </div>
+		</div>	
+        <section data-section='main' class="">
+		    <script src='https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit'></script>
+            <div class="result-block--validate" id="blockIntroResult">
+                <div class="img">
+                    <img src="./images/ajax.png" alt="">
+                    <br>
+                    <a href="./images/ajax.png" class="dnL btn">Скачать pdf</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="modified_date_mobile">Последнее изменение: ноябрь 2021</div>
+
+<div class="ds_container">
+    <div class="main-subscribe">
+        <div class="main-subscribe__container">
+            <div class="main-subscribe__form ds21">
+                <h3>Подпишитесь на наши рассылки</h3>
+                <form action="" method="POST" id="main-subscription">
+                    <div class="main-subscribe__row">
+                        <div class="col">
+                            <div class="ds_input">
+                                <i class="ds_icon" style="background-image: url(./images/mail-icon.svg);"></i>
+                                <input type="text" name="email" id="email" autocomplete="off">
+                                <label for="email">Введите e-mail</label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="ds_checkbox_1x">
+                                <input type="checkbox" name="agreement" id="id_input">
+                                <label for="id_input">
+                                    <span class="ds_checkbox_input"></span>
+                                    <span class="ds_checkbox_label T3">
+                                        Даю согласие на
+                                        <a href="/upload/Текст согласия на рассылку и обработку ПнД (2).pdf" target="_blank">
+                                            обработку персональных данных
+                                        </a>
+                                    </span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <span class="ds_b_3x">
+                                <span>Подписаться</span>
+                                <input type="submit" name="subscribe" value="Подписаться">
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="main-subscribe__thanks"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    BX.message({
+        TEMPLATE_PATH: '/local/components/invitro/subscription/templates/mainpage'
+    })
+</script>
+<footer class="invitro_footer">
+    <div class="invitro_footer-container">
+        <div class="invitro_footer-wrapper wrapper-flex-start">
+            <div class="invitro_footer-logo">
+                <div class="row row--start row--center">
+    <a href="/">
+        <img class="header-logo" src="./images/main-logo.svg" alt="Медицинская компания Инвитро">
+    </a>
+    <a class="header-monitoring" href="/l/invitro_monitor/?from=logo_header">
+        <img src="/local/templates/invitro_main/src/image/elements/monitoring.svg" alt="logo">
+    </a>
+</div>            </div>
+            <div class='invitro_footer-contacts-block'>
+                    
+<div class="ft-phone__group">
+<span class="">
+<a class="ft-phone__link" href="tel:88002003630" onclick="(dataLayer = window.dataLayer || []).push({'eCategory':'conversion', 'eAction':'phone-number', 'eLabel': 'click', 'eNI':'0', 'event': 'GAEvent'});">8 (800) 200-363-0</a>
+</span>
+	<span class="ft-phone__disrcipt ">Бесплатный звонок по России</span>
+</div>
+<span class="ft-phone__second">
+<a class="ft-phone__link" href="tel:88123633630" onclick="(dataLayer = window.dataLayer || []).push({'eCategory':'conversion', 'eAction':'phone-number', 'eLabel': 'click', 'eNI':'0', 'event': 'GAEvent'});">8 (812) 363-363-0</a>
+</span>
+                    <div class="invitro_footer-email">
+                        <a href="mailto:info@invitro.ru" class="ft-mail__link">info@invitro.ru</a>
+                    </div>
+                    <div class="invitro_footer-feedback_link">
+                    </div>
+                    <div class="invitro_footer-feedback_link mobile">
+                    </div>
+            </div>
+        </div>
+
+        <div class="invitro_footer-section_container">
+            <div class="invitro_footer-wrapper">
+            <div class="invitro_footer-menu">
+                <div class="invitro_footer-menu_access">
+                    <div class="ft-lg-list">
+			<a class="ft-lg-list__title" href="/" data-user="PATIENTS">Пациентам</a>
+			<a class="ft-lg-list__title" href="/doctors/" data-user="DOCTOR">Врачам</a>
+			<a class="ft-lg-list__title" href="/franchize/" data-user="FRANCHCHISING">Франчайзинг</a>
+			<a class="ft-lg-list__title" href="/medical/" data-user="CORP_CLIENT">Корпоративным клиентам</a>
+			<a class="ft-lg-list__title" href="/about/" data-user="PRESS">Прессе</a>
+	</div>                </div>
+
+
+                <div class="invitro_footer-menu_main">
+                        <div class="ft__col">
+        <div class="ft-sm-block">
+            <a class="ft-sm-block__title no-child " href="/piter/radiology/">Медицинские услуги</a>                            <a class="ft-sm-block__title no-child " href="/piter/checkup/">Комплексные обследования</a>                            <a class="ft-sm-block__title no-child " href="/piter/vrachi/">Запись к врачу</a>                            <a class="ft-sm-block__title no-child " href="/piter/vnd/">Выезд на дом</a>                            <a class="ft-sm-block__title no-child " href="/offices/piter/">Адреса медицинских офисов</a>                            <a class="ft-sm-block__title no-child " href="/library/">Библиотека пациента</a>                                    </div>
+    </div>
+    <div class="ft__col">
+        <div class="ft-sm-block">
+            <a class="ft-sm-block__title no-child " href="http://www.3630363.ru/">Вопрос врачу</a>                            <a class="ft-sm-block__title no-child " href="/about/">Об Инвитро</a>                            <a class="ft-sm-block__title no-child " href="/piter/about/vacancy/">Вакансии</a>                            <a class="ft-sm-block__title no-child " href="/medical/">Клиники-партнеры</a>                            <a class="ft-sm-block__title no-child " href="/legal-info/">Юридическая информация</a>                            <a class="ft-sm-block__title no-child " href="/loyalty/">Программа лояльности</a>                                    </div>
+    </div>
+    <div class="ft__col">
+        <div class="ft-sm-block">
+            <a class="ft-sm-block__title no-child " href="/clinical-researches/central-laboratory/">Клинические исследования</a>                            <a class="ft-sm-block__title no-child " href="https://www.invitro.ru/about/vacancy/list/rezultaty-sout/piter/">Результаты СОУТ</a>                                    </div>
+    </div>
+
+<div class="editionPopup" style="display: none;">
+    </div>
+<script>
+    window.openCallBackEdition = function(obj) {
+        obj.content.find('.popup-slider__img-wrap img').each(function( index ) {
+            if (typeof $(this).attr('src') == 'undefined' && typeof $(this).attr('data-src') == 'string')
+                $(this).attr({'src' : $(this).attr('data-src')});
+        });
+    }
+</script>                </div>
+            </div>
+
+            <div class="invitro_footer-btn_container">
+                <div class="invitro_footer-btn_part1">
+                    <a class="invitro_footer-btn" href="/analizes/for-doctors/piter/">
+                        <svg class="icon" style="background-image: url(./images/results.PNG); background-size:cover">
+                            <use xlink:href="./images/results.PNG"></use>
+                        </svg> Каталог анализов
+                    </a>
+
+                    <a href="https://lk3.invitro.ru/no-registration-results" class="invitro_header-get_result"
+                            onclick="(dataLayer = window.dataLayer || []).push({'pPath': location.pathname + 'virtual/send-results/', 'event': 'GAPageview'});">
+                        <svg class="icon" style="background-image: url(./images/colb.PNG); background-size:cover">
+                            <use xlink:href="/local/templates/invitro_main/src/image/sprites/spriteSVG/symbol/sprite.svg#colba"></use>
+                        </svg>
+                        <span>Результаты анализов</span>
+                    </a>
+                </div>
+
+                <div class="invitro_footer-btn_part2">
+                    <div class="ft-social">
+                        <a href="#" class="ft-social__link ft-social__link--fb">
+                            <svg class="icon icon-icon-fb ">
+
+                            </svg>
+                        </a>
+                        <a href="#" class="ft-social__link ft-social__link--ok">
+                            <svg class="icon icon-icon-ok  ">
+                                
+                            </svg>
+                        </a>
+                        <a href="#" class="ft-social__link ft-social__link--vk">
+                            <svg class="icon icon-icon-vk ">
+                                
+                            </svg>
+                        </a>
+                        <a href="#" class="ft-social__link ft-social__link--youtube">
+                            <svg class="icon icon-icon-youtube ">
+                                
+                            </svg>
+                        </a>
+                        <a href="#" class="ft-social__link ft-social__link--instagram">
+                            <svg class="icon icon-icon-instagram ">
+                                
+                            </svg>
+                        </a>
+                        <div class="invitro_footer__age-wrap">
+                            <div class="invitro_footer__age__wrapper">
+                                <div class="invitro_footer__age"> 18+ </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="invitro_footer-payments_container">
+                        <span>Принимаем к оплате</span>
+
+                        <div class="invitro_footer-payments">
+                            <img src="./images/mir.svg">
+                            <img src="./images/mc.svg">
+                            <img src="./images/visa.svg">                        
+                        </div>
+                    </div>
+                </div>
+                <div class="invitro_footer-btn_part3">
+                    <a href="#"><img src="./images/icon-google-play.svg" alt=""></a>
+                    <a href="#"><img src="./images/icon-app-store.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="invitro_footer-wrapper">
+            <div class="ft-partners--wrap">
+                <div class="container">
+                    <div class="ft-partners row">
+                        <div class="ft-partners__nav ft-partners__nav--arrows"></div>
+                        <div class="ft-partners__block">
+                            <ul class="ft-partners__list slick-initialized slick-slider">
+                                <div class="slick-list draggable">
+                                    <div class="slick-track" style="opacity: 1; width: 447px; transform: translate3d(0px, 0px, 0px);">
+                                        <div class="slick-slide slick-current slick-active">
+                                            <div>
+                                                <li class="ft-partners__item" style="width: 100%; display: inline-block;">
+                                                    <a href="#" class="ft-partners__link">
+                                                        <img src="./images/707d5fa8b2851f10a7237d0e811280b6.png" title="3dbio">
+                                                    </a>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="slick-slide slick-active">
+                                            <div>
+                                                <li class="ft-partners__item" style="width: 100%; display: inline-block;">
+                                                    <a href="#" class="ft-partners__link">
+                                                        <img src="./images/c1cfc0d64d93c54693275b8ecec51934.png" title="Vet.invitro">
+                                                    </a>
+                                                </li>
+                                            </div>
+                                        </div>
+                                        <div class="slick-slide slick-active">
+                                            <div>
+                                                <li class="ft-partners__item" style="width: 100%; display: inline-block;">
+                                                    <a href="#" class="ft-partners__link">
+                                                        <img src="./images/b13fa458916ce1b3f49206ddd6e49c62.png" title="Архмедстрой">
+                                                    </a>
+                                                </li>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container ft-bottom__row left ds21">
+                <div class="ft-bottom">
+                    <p>
+                        
+                        © ООО «ИНВИТРО», 1998 - 2021 • Система менеджмента качества ИНВИТРО соответствует требованиям нормативных документов ГОСТ Р ИСО 15189:2015 «Лаборатории медицинские. Частные требования к качеству и компетентности» и ГОСТ ИСО 9001-2015 (ISO 9001:2015) • Для подтверждения достоверности выполняемых исследований ИНВИТРО регулярно принимает участие в программах внешней оценки качества:
+                        ФСВОК (Россия), ЦККИГХ ФГБОУ ДПО РМАНПО Минздрава (Россия), ФБУЗ ФЦГиЭ Роспотребнадзора (Россия), The Westgard Sigma Verification Program (Westgard QC, Inc. (США)),
+                        EQAS – BIO-Rad (США), RIQAS – Randox (Великобритания); В программах межлабораторного сравнения:
+                        SNCS (Sysmex Network Communication Systems) – Sysmex (Япония),
+                        UNITY Interlaboratory Program – Bio-Rad (США);
+                        В программе мониторинга стабильности медиан результатов пациентов:
+                        Percentiler / Flagger programs – Noklus (The Norwegian organization for Quality Improvement of Laboratory Examinations, Норвегия) • В ИНВИТРО принята и последовательно реализуется политика в области качества, основанная на требованиях международных стандартов, многоуровневом обучении специалистов и внедрении самых современных достижений лабораторной диагностики. • Информация, предоставляемая на сайте www.invitro.ru, предназначена для поддержки, а не для замещения существующих отношений между пациентом и его лечащим врачом.        
+                    </p>
+                    Все права защищены и охраняются законом. © 2004 г. ООО "ИНВИТРО" • Копирование, тиражирование, а равно иное использование материалов, размещенных на сайте <a href="#">www.invitro.ru</a> возможно только с письменного разрешения Правообладателя • Лицензия №ЛО-77-01-021010 от 18 января 2021 г.•
+        
+                    <span style="color:black;" class="mobile-hide">
+                        <br>
+                        Нашли ошибку? Выделите ее и нажмите  
+                        <span class="bordered">Ctrl</span>
+                        +
+                        <span class="bordered">Enter</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
